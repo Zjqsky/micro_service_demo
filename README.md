@@ -1,6 +1,13 @@
 # micro_service_demo
 
-## rpc protobuf 使用
+## 微服务介绍
+> 减少功能模块的重复开发  
+> 增强功能模块高内聚、低耦合  
+> 功能模块独立部署、独立优化、独立升级
+> 功能模块负载能力独立控制
+> 微服务之间RPC通信
+
+## rpc protobuf 使用（接口定义语言）
 ### protobuf编写参考文档
 > https://www.jianshu.com/p/4443c28d4bf7
 
@@ -16,7 +23,7 @@
 > 如 python -m grpc_tools.protoc -I. --python_out=./ --grpc_python_out=./ ./protos/micro_service.proto
 
 
-## peewee 访问mysql数据库
+## peewee 访问mysql数据库（python的数据库访问）
 ### peewee 使用参考文档
 > http://docs.peewee-orm.com/en/latest/index.html
 
@@ -27,7 +34,7 @@
 > tests/peewee_test.py
 
 
-## consul服务注册、发现
+## consul服务注册、发现（优化服务ip配置过程，减轻服务访问复杂度）
 ### consul python库安装命令
 > pip install python-consul
 
@@ -35,7 +42,7 @@
 > tests/consul.py
 
 
-## 容器命令使用
+## 容器命令使用（服务部署环境，在容器中运行）
 ### 容器镜像配置
 > 编写requirements.txt，如下格式为"{package_name}=={package_version}"，依赖包版本可以通过 "pip show {package_name}" 查看
 ```requirements.txt
