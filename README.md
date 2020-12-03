@@ -72,7 +72,7 @@ CMD ["python", "main.py"]
 ### 容器镜像创建命令
 ######## 创建镜像
 > docker build -t '13070163997/micro_service_server:v1.0.1' .  
-######## 镜像推送至镜像仓库
+######## 镜像推送至镜像仓库(docker hub)
 > docker push 13070163997/micro_service_server:v1.0.1
 
 ### 容器镜像本地docker测试相关命令（感兴趣的同学可以自学下 docker 的使用：https://www.runoob.com/docker/docker-tutorial.html）
