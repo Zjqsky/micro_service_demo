@@ -32,7 +32,7 @@ if __name__ == '__main__':
     port = "30004"  #consul服务器对外的端口
     consul_client = Consul(host, port)
 
-    name = "exp_college_service"
+    name = "micro_service"
     host = "60.205.215.111"
     port = 30010
     consul_client.RegisterService(name, host, port)
