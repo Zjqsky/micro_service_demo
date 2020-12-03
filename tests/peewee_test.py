@@ -51,8 +51,10 @@ class Area(Model):
 
 
 def run():
+    # 数据库访问测试
     with database.connection_context():
-        data = Area.select().dicts()
+        #
+        全部输出data = Area.select().dicts()
     print(list(data))
 
     pass

@@ -71,20 +71,20 @@ CMD ["python", "main.py"]
 
 ### 容器镜像创建命令
 ######## 创建镜像
-> docker build -t '13070163997/micro_service_server:v1.0.1' .  
+> docker build -t '{docker_hub用户名}/micro_service_server:v1.0.1' .  
 ######## 镜像推送至镜像仓库(docker hub)
-> docker push 13070163997/micro_service_server:v1.0.1
+> docker push {docker_hub用户名}/micro_service_server:v1.0.1
 
 ### 容器镜像本地docker测试相关命令（感兴趣的同学可以自学下 docker 的使用：https://www.runoob.com/docker/docker-tutorial.html）
 ######## 由镜像创建容器
 > docker run -itd --name {容器名} -p {机器端口}:{容器端口} {镜像名}  
-> 如：docker run -itd --name micro_service -p 30019:30019 13070163997/micro_service_server:v1.0.1
+> 如：docker run -itd --name micro_service -p 30019:30019 {docker_hub用户名}/micro_service_server:v1.0.1
 ######## 查看容器id
 > docker ps
 ######## 进入容器命令行
 > docker exec -it {容器id} /bin/bash
 
-### k8s 部署服务
+### k8s(kubernetes) 部署服务
 ######## 编写 kubernetes_yamls/micro_service.deployment.yml 
 ```yaml
 apiVersion: extensions/v1beta1
@@ -102,7 +102,7 @@ spec:
       hostNetwork: true
       containers:
       - name: micro-service
-        image: 13070163997/micro_service_server:v1.0.1
+        image: {docker_hub用户名}/micro_service_server:v1.0.1
         imagePullPolicy: "IfNotPresent"
         ports:
         - containerPort: 31019

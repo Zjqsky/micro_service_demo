@@ -18,6 +18,7 @@ class Area(Model):
         database = COMMON_DB
 
 
+# struct类型转response
 def model_to_resp_data(model_data, resp_data):
     resp_data.id = model_data.id
     resp_data.name = model_data.name
@@ -28,6 +29,7 @@ def model_to_resp_data(model_data, resp_data):
     pass
 
 
+# dict类型转response
 def dict_to_resp_data(model_data, resp_data):
     resp_data.id = model_data['id']
     resp_data.name = model_data['name']

@@ -106,3 +106,39 @@ TypeError: Object of type datetime is not JSON serializable
   status: NORMAL
 }
 
+2020-12-03 21:18:05,689 - /Users/zhengjiaqi/Documents/schoolWork/services/micro_service_demo/main.py[line:8] - INFO: service start
+2020-12-03 21:18:35,054 - /Users/zhengjiaqi/Documents/schoolWork/services/micro_service_demo/handlers/base_handler.py[line:14] - INFO: function: do_micro, request: text: "micro_req"
+
+2020-12-03 21:18:35,116 - /Users/zhengjiaqi/Documents/schoolWork/services/micro_service_demo/handlers/base_handler.py[line:21] - INFO: response: data {
+  text: "micro_resp"
+  m {
+    key: 110
+    value: "ret"
+  }
+  strs {
+    str: "micro"
+  }
+  strs {
+    str: "resp"
+  }
+  status: NORMAL
+}
+
+2020-12-03 21:45:44,994 - /Users/zhengjiaqi/Documents/schoolWork/services/micro_service_demo/main.py[line:8] - INFO: service start
+2020-12-03 21:46:18,416 - /Users/zhengjiaqi/Documents/schoolWork/services/micro_service_demo/handlers/base_handler.py[line:14] - INFO: function: do_micro, request: text: "micro_req"
+
+2020-12-03 21:46:18,481 - /Users/zhengjiaqi/Documents/schoolWork/services/micro_service_demo/handlers/base_handler.py[line:21] - INFO: response: data {
+  text: "micro_resp"
+  m {
+    key: 110
+    value: "ret"
+  }
+  strs {
+    str: "micro"
+  }
+  strs {
+    str: "resp"
+  }
+  status: NORMAL
+}
+

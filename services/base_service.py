@@ -10,9 +10,11 @@ from protos import base_pb2
 def rpc_client_wrap(function):
     @wraps(function)
     def decorator(self, *args, **kwargs):
+        # rpc请求日志
         logger.info('function: %s, request: {"args": %s, "kwargs": %s}' % (function.__name__, str(args), str(kwargs)))
         ret = function(self, *args, **kwargs)
 
+        # 返回信息处理
         if not ret:
             logger.error("function: %s, rpc return null" % function.__name__)
             return None, ""
@@ -35,6 +37,7 @@ def init_client(service):
     service_client = None
     rpc_server_addr = ''
     if hasattr(service, 'service_conf'):
+        # 若测试ip有配置，调用测试ip微服务，否则走服务发现
         if 'addr' in service.service_conf:
             rpc_server_addr = service.service_conf['addr']
         else:

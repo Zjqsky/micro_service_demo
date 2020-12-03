@@ -28,17 +28,17 @@ class Consul(object):
 
 
 if __name__ == '__main__':
-    host = "60.205.215.111"  #consul服务器的ip
-    port = "30004"  #consul服务器对外的端口
-    consul_client = Consul(host, port)
+    host="60.205.215.111" #consul服务器的ip
+    port="30004" #consul服务器对外的端口
+    consul_client=Consul(host,port)
 
-    name = "micro_service"
-    host = "60.205.215.111"
-    port = 30010
-    consul_client.RegisterService(name, host, port)
-    #
-    check = consul.Check().tcp(host, port, "5s", "30s", "30s")
+    name="micro_service"
+    host="60.205.215.111"
+    port=30010
+    consul_client.RegisterService(name,host,port)  # 服务注册
+
+    check = consul.Check().tcp(host, port, "5s", "30s", "30s")   # 周期检查
     print(check)
-    res = consul_client.GetService(name)
+    res=consul_client.GetService(name)    # 服务发现
     print(res)
 

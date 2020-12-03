@@ -12,6 +12,7 @@ import json
 def do_micro(request, response):
     text = request.text
     
+    # response填充随意内容测试
     if text == 'micro_req':
         response.data.text = 'micro_resp'
         response.data.m[110] = 'ret'
@@ -20,6 +21,7 @@ def do_micro(request, response):
             str_ret.str = str_val
         response.data.status = micro_service_pb2.Data.NORMAL
 
+    # 测试数据库访问
     with COMMON_DB.connection_context():
         area_list = area.Area.select().dicts()
         for area_data in area_list:
