@@ -28,13 +28,13 @@ class Consul(object):
 
 
 if __name__ == '__main__':
-    host="60.205.215.111" #consul服务器的ip
+    host="10.105.240.138" #consul服务器的ip
     port="30004" #consul服务器对外的端口
     consul_client=Consul(host,port)
 
     name="micro_service"
     host="60.205.215.111"
-    port=30010
+    port=30018
     consul_client.RegisterService(name,host,port)  # 服务注册
 
     check = consul.Check().tcp(host, port, "5s", "30s", "30s")   # 周期检查
