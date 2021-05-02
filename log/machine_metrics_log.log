@@ -1,0 +1,14 @@
+kube-master:log root$ cat machine_metrics_log.log
+2021-02-20 13:29:11,347 - /root/services/machine_metrics/handlers/node.py[line:8] - INFO: add node kube-node-1 success, cur_nodes: kube-master, kube-node-1
+2021-02-20 13:31:36,241 - /root/services/machine_metrics/handlers/contain.py[line:14] - INFO: create container success, node_name: kube-node-1, container_id: b2cc6e80db4b3b569588c2307f8fe170bd26916361f7735545ff87bb4f3441c2, image_tag: 60.205.215.111:8012/wz24:c644
+
+
+
+kube-master:log root$ cat machine_metrics_log.log
+2021-02-20 13:29:11,347 - /root/services/machine_metrics/handlers/node.py[line:8] - INFO: add node kube-node-1 success, cur_nodes: kube-master, kube-node-1
+2021-02-20 13:31:36,241 - /root/services/machine_metrics/handlers/contain.py[line:14] - INFO: create container success, node_name: kube-node-1, container_id: b2cc6e80db4b3b569588c2307f8fe170bd26916361f7735545ff87bb4f3441c2, image_tag: 60.205.215.111:8012/wz24:c644
+2021-02-20 16:59:34,301 - /root/services/machine_metrics/handlers/node.py[line:8] - INFO: add node kube-node-2 success, cur_nodes: kube-master, kube-node-1, kube-node-2
+2021-02-20 17:03:28,173 - /root/services/machine_metrics/handlers/contain.py[line:14] - INFO: create container success, node_name: kube-node-2, container_id: 7645b3f08a586dc0648af3c33be8cd717e372fcb8c5cc1f09be994af841a3966, image_tag: 60.205.215.111:8012/wz24:c644
+
+
+
